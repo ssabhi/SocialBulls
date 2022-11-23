@@ -1,0 +1,206 @@
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+    padding: 70px 20vw 0px 0vw;
+}
+
+// #visual {
+//     position: absolute;
+// }
+
+h1 {
+    font-size: 4rem;
+}
+
+.header-caption {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 400px;
+}
+
+.blue {
+    background: #3c31dd;
+}
+
+.red {
+    background: #dd3f31
+}
+
+.pink {
+    background: #FA7268
+}
+
+.dark {
+    // background: #0f0f10
+    background: black
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    // background-color: #0f0f10;
+    background-color: black;
+    transform: translate(85%, 60%);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #3c31dd;
+    transform: translate(-4%, 40%);
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    // overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 328px;
+}
+
+.wave .shape-fill {
+    fill: #000000;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('../../assets/images/layered-waves-haikei.svg');
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+}
+
+.whatsapp-image {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    cursor: pointer
+}
+
+.social-media {
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+}
+
+.instagram-image, .facebook-image, .twitter-image, .linkedin-image {
+    width: 4%;
+    opacity: 1;
+    margin-right: 150px;
+}
+
+.copyright {
+    position: relative;
+    top: 90%;
+}
+
+.app-footer {
+    position: absolute;
+    top: 490%;
+    left: 0%;
+    width: 100%;
+}
+
+.clients {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scrollpath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba($color: #fff, $alpha: 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    // height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+::-webkit-scrollbar-button {
+    width: 0%;
+    height: 0%;
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progressbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}

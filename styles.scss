@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css";
+html, body { height: 100%; 
+    margin: 0,
+   }
+body { 
+  margin: 0;
+  font-family: 'Spartan', "Helvetica Neue", sans-serif; 
+}
+
+::-webkit-scrollbar {
+  width: 0%;
+  height: 0%;
+}
+
+%buttonStyles {
+  position: absolute;
+  bottom: 10%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: 0;
+  background: none;
+}
+
+.carousel-container {
+  max-width: 1500px;
+  height: 500px;
+  margin: 10% auto;
+  // overflow-y: hidden;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 830px;
+  height: inherit;
+  margin: 0 auto;
+  // overflow: hidden;
+
+  &__item {
+    position: absolute;
+    box-shadow: 0 10px 15px rgba(34, 34, 34, 0.2);
+    border-radius: 30px;
+    // overflow: hidden;
+    width: 650px;
+    height: 400px;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+    .title {
+      position: absolute;
+      text-transform: uppercase;
+      top: 85%;
+      right: 18%;
+      font-weight: 600;
+      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      font-size: 13px;
+      padding-bottom: 3px;
+      letter-spacing: 1.2px;
+      border-bottom: 1px solid #ececec;
+      color: #ececec;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  fill: #131313;
+  transition: all 0.3s ease;
+}
+
+button.prev {
+  @extend %buttonStyles;
+  left: 5%;
+}
+button.next {
+  @extend %buttonStyles;
+  right: 5%;
+}
+
+button:hover .icon {
+  fill: #727272;
+}
+
+#toast-container > div {
+  opacity: 1;
+}
+
+.toast {
+  font-size: initial !important;
+  border: initial !important;
+  backdrop-filter: blur(0) !important;
+}
+.toast-success {
+  background-color: #51A351 !important;
+}
+.toast-error {
+  background-color: #BD362F !important;
+}
+.toast-info {
+  background-color: #2F96B4 !important;
+}
+.toast-warning {
+  background-color: #F89406 !important;
+}
